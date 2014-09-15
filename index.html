@@ -1,0 +1,54 @@
+<html ng-app="calendar">
+<head>
+  <title>Calendar</title>
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="bower_components/jquery/jquery.js"></script>
+  <script type="text/javascript" src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
+  
+  <!-- AngularJS -->
+  <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+
+  <!-- Firebase -->
+  <script type="text/javascript" src="bower_components/firebase/firebase.js"></script>
+  <script type="text/javascript" src="bower_components/angularfire/dist/angularfire.min.js"></script>
+  
+  <!-- FullCalendar -->
+  <script type="text/javascript" src="bower_components/fullcalendar/fullcalendar.js"></script>
+  <script type="text/javascript" src="bower_components/fullcalendar/gcal.js"></script>
+  <link href="bower_components/fullcalendar/fullcalendar.css" rel="stylesheet">
+
+  <!-- AngularUI Calendar -->
+  <script type="text/javascript" src="bower_components/angular-ui-calendar/src/calendar.js"></script>
+
+  <!-- AngularUI Datepicker -->
+  <script type="text/javascript" src="bower_components/angular-ui-date/src/date.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script type="text/javascript" src="scripts/app.js"></script>
+
+  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/calendar.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header id="header"><h1>AngularJS + Firebase Calendar</h1></header>
+
+    <div class="row" ng-controller="calendar">
+      <div class="col-sm-8">
+        <div ui-calendar ng-model="events"></div>        
+      </div>
+      <div class="col-sm-4">
+        <h2>New event</h2>
+        <form ng-submit="addEvent()">
+          <input ng-model="newEvent.title" type="text" placeholder="Title">
+          <input ui-date ui-date-format="DD, d MM, yy" ng-model="newEvent.start">
+          <input type="submit" value="Add">
+        </form>
+      </div>
+
+    </div>
+    
+  </div>
+</body>
+</html>

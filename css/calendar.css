@@ -1,0 +1,15 @@
+h2  {
+  margin-top: 0;
+}
+
+.ui-datepicker{
+  display: none;
+}
+
+.ui-datepicker-next {
+  float: right;
+}
+
+.ui-datepicker-today {
+  background-color: #fcf8e3;
+}
